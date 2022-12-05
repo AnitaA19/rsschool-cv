@@ -4,7 +4,7 @@ Phone: +995 579 503 322
 Email: balasanyananita@gmail.com
 
 ## Summary
-I am 18 years old. I have some work experience. I am very ambitious and hawdworking. 
+I am 18 years old. I have some work experience. I am very ambitious and hawdworking 
 
 
 ## Skills
