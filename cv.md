@@ -175,3 +175,103 @@ themeToggleButton.addEventListener('click', function() {
 });
 ```
 
+### C++ Code example. Task from University
+
+```
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void encode(string* phrase, int* shift) {                          
+    for (char* letter = &(*phrase)[0]; *letter != '\0'; ++letter) {   
+        if ((*letter >= 'a' && *letter <= 'z') || (*letter >= 'A' && *letter <= 'Z')) {  
+            char* base = new char;
+            if (*letter >= 'a' && *letter <= 'z') {                      
+                *base = 'a';
+            }
+            else if (*letter >= 'A' && *letter <= 'Z') {
+                *base = 'A';
+            }
+            //(*letter - *base + *shift) 
+            *letter = ((*letter - *base + *shift) % 26 + 26) % 26 + *base;
+            delete base;          
+        }
+    }
+}
+
+void decode(string* phrase, int* shift) {   
+    for (char* letter = &(*phrase)[0]; *letter != '\0'; ++letter) {
+        if ((*letter >= 'a' && *letter <= 'z') || (*letter >= 'A' && *letter <= 'Z')) {
+            char* base = new char;
+            if (*letter >= 'a' && *letter <= 'z') {
+                *base = 'a';
+            }
+            else if (*letter >= 'A' && *letter <= 'Z') {
+                *base = 'A';
+            }
+            *letter = ((*letter - *base - *shift) % 26 + 26) % 26 + *base;
+            delete base;
+        }
+    }
+}
+
+int main() {
+    int* choice = new int;
+    int* shift = new int;
+    string* phrase = new string;
+
+    while (true) {   
+        cout << "Enter a passphrase (q to quit): ";
+        getline(cin, *phrase);  
+        if (phrase->empty()) {
+            cout << "Please enter a passphrase!" << endl;
+            continue;
+        }
+
+        if (*phrase == "q") {         
+            cout << "EXITING. BYE, HONEY!" << endl;
+            break;
+        }
+
+        cout << "Select an operation :" << endl;
+        cout << "1. Encode" << endl;
+        cout << "2. Decode" << endl;
+
+        cout << "Enter your choice (1/2): ";
+
+        while (!(cin >> *choice) || (*choice != 1 && *choice != 2)) {   
+            cout << "Invalid choice. Please enter 1 or 2." << endl;
+            cin.clear();
+            cin.ignore(1000, '\n');
+        }
+
+        cout << "Enter a shift: ";
+
+        while (!(cin >> *shift)) {
+            cout << "Error, the shift input should be an integer!" << endl;
+            cin.clear();
+            cin.ignore(1000, '\n');
+        }
+
+        switch (*choice) {
+        case 1:
+            encode(phrase, shift);
+            cout << "Encoded passphrase: " << *phrase << endl;
+            break;
+        case 2:
+            decode(phrase, shift);
+            cout << "Decoded passphrase: " << *phrase << endl;
+            break;
+        }
+
+        cin.ignore(); 
+    }
+
+    delete choice;
+    delete shift;
+    delete phrase;
+
+    return 0;
+}
+```
