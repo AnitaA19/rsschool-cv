@@ -275,3 +275,25 @@ int main() {
     return 0;
 }
 ```
+
+### Experience:
+- Web Development Projects: Built multiple projects during my coursework, including interactive websites using HTML, CSS, and JavaScript, and more dynamic applications with React and Node.js. Courses from Udemy.
+
+- Coding Tests & Challenges: Regularly solve coding challenges to sharpen my skills in algorithms and problem-solving. Write codes in the platforms like LeetCode and CodeWars.
+
+- Internship in Spain: Completed a three-month web development internship, where I collaborated on real projects, worked with APIs, and gained hands-on experience in a professional setting.
+
+- University Projects: Developed applications for various academic projects, implementing best practices in web development and data structures.
+
+### Education:
+- Tbilisi State University
+Bachelor’s Degree in Computer Science
+Courses include data structures, algorithms, and software development principles, with a focus on web technologies.
+
+- Online Learning
+Completed courses on platforms like Udemy and Coursera, covering React, Node.js, and advanced JavaScript concepts to strengthen my practical skills.
+
+## Languages:
+- English(B1-B2);
+- Russian(native);
+- Georgian(native);
