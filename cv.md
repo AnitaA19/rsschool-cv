@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Anita Balasanyan
 
 ## Contact Information
@@ -297,3 +298,6 @@ Completed courses on platforms like Udemy and Coursera, covering React, Node.js,
 - English(B1-B2);
 - Russian(native);
 - Georgian(native);
+=======
+it a
+>>>>>>> d3a346a5cb0b066ced76e4db656e7a4f6b93fa51
