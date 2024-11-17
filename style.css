@@ -37,19 +37,24 @@ h2 {
     margin-bottom: 1.6rem;
 }
 
-.cv-header {
+/* .cv-header {
     padding: 4rem 8rem;
     background: linear-gradient(135deg, #9e7d6c, #e6ccb2);
     color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
-}
+} */
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
+    padding: 2rem 4rem;
+    background: linear-gradient(135deg, #9e7d6c, #e6ccb2);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 .cv-img {
@@ -293,30 +298,25 @@ body.dark-theme .my-code {
     color: #f8f8f2;
 }
 
-.footer {
-    background-color: #eee7e1;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer .container {
+.footer-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #eae3de;
 }
 
-.footer .copyright {
+.copyright {
     font-size: 14px;
     color: #bbb;
 }
-
-.footer .links {
+.links {
     display: flex;
     align-items: center;
 }
 
-.footer .links a:link {
+.links a:link 
+.links a:visited {
     color: #333;
     text-decoration: none;
     margin-left: 2rem;
@@ -324,11 +324,12 @@ body.dark-theme .my-code {
     transition: color 0.3s ease;
 }
 
-.footer .links a:hover  {
+.links a:hover  
+.links a:active  {
     color: #9e7d6c; 
 }
 
-.footer .course-logo {
+.course-logo {
     width: 5rem;
     height: auto;
     margin-left: 1rem;
@@ -353,12 +354,9 @@ body.dark-theme .my-code {
         padding: 0 2.4rem;
     }
 
-    .cv-header {
-        padding: 3rem 4rem;
-    }
-
     .header-container {
         gap: 3rem;
+        padding: 1rem 2rem;
     }
 
     .img {
@@ -402,14 +400,11 @@ body.dark-theme .my-code {
         font-size: 50%;
     }
 
-    .cv-header {
-        padding: 2rem;
-    }
-
     .header-list {
         flex-direction: column;
         align-items: center;
         gap: 1.6rem;
+        padding: 1rem;
     }
 
     .language-list {
@@ -421,23 +416,23 @@ body.dark-theme .my-code {
         padding: 2.4rem;
     }
 
-    .footer .container {
+    .footer-container {
         flex-direction: column;
         gap: 2rem;
     }
 
-    .footer .links {
+    .links {
         flex-direction: column;
         gap: 1.6rem;
     }
 
-    .footer .links a:link {
+     .links a:link {
         margin-left: 0;
     }
 }
 
 @media screen and (max-width: 31.25em) {
-    .cv-header {
+    .header-container {
         padding: 1.6rem;
     }
 
